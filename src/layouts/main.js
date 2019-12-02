@@ -101,7 +101,7 @@ export default function Main({ ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"Creative Tim"}
+        logoText={"CGC"}
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}

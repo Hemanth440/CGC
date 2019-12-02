@@ -1,7 +1,5 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import Link from '@material-ui/core/Link';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -50,6 +48,12 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  cardFooter: {
+    flexDirection: 'column'
+  },
+  updateBtn: {
+    marginBottom: '10px'
+  }
 }));
 
 export default function SignUp() {
@@ -150,13 +154,13 @@ export default function SignUp() {
                       fullWidth: true
                     }}
                   />
-                </GridItem>
-                <GridItem>
-                  <Button color="primary">Update Profile</Button>
-                </GridItem>
+                </GridItem>                
               </GridContainer>                                    
             </CardBody>
-            <CardFooter>
+            <CardFooter className={classes.cardFooter}>
+              <div className={classes.updateBtn}>
+                <Button color="primary">Update Profile</Button>
+              </div>              
               <Copyright />
             </CardFooter>
           </Card>
